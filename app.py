@@ -2,6 +2,8 @@
 from bs4 import BeautifulSoup
 from local_settings import username,password
 import twill
+import webapp2
+import urllib2
 from twill.commands import *
 
 class Bot(webapp2.RequestHandler):
@@ -15,6 +17,7 @@ class Bot(webapp2.RequestHandler):
         fv("1", "t", text)
         fv("1", "u", url)
         submit('0')
+        self.response.write(text + url)
 
     def gen_post(self):
         url = "https://twitter.com/yugdom"
