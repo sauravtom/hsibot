@@ -1,0 +1,4 @@
+cron:
+- description: hsi bot run
+  url: /
+  schedule: every 4 hours
